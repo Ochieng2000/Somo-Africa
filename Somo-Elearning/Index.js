@@ -32,12 +32,27 @@ allLinks.forEach(function(e, index){
 allLinks2.forEach(function(f){
     f.addEventListener('click', function(){
         removeLink();
+
     });
 });
-sidebartoggler.addEventListener('click', function(){
+sidebartoggler.addEventListener('click', function () {
+    if (display1.classList.contains('set2')) {
+        display1.classList.remove('set2');
+        C.classList.toggle('first');
+        D.classList.toggle('last');
+        bar.classList.toggle('middle');
+
+     }
     removeLink();
 });
-sidebartoggler1.addEventListener('click', function(){
+sidebartoggler1.addEventListener('click', function () {
+    if (display.classList.contains('set')) {
+        display.classList.remove('set');
+        A.classList.toggle('first');
+        B.classList.toggle('last');
+        bars.classList.toggle('middle');
+
+    }
     display1.classList.toggle('set2');
     bar.classList.toggle('middle');
     C.classList.toggle('first');
@@ -50,4 +65,3 @@ function removeLink(){
     A.classList.toggle('first');
     B.classList.toggle('last');
 };
-
